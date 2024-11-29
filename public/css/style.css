@@ -1,0 +1,180 @@
+.imglogo {
+    width: 200px;
+    height: 60px;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+input[type="text"] {
+    border-radius: 5px;
+    color: rgb(29, 25, 25);
+    border: 1px solid white;
+    width: 300px;
+    height: 30px;
+}
+
+input[name='search']::placeholder {
+    color: #888;
+    /* Màu chữ của placeholder */
+    font-style: italic;
+    /* Kiểu chữ nghiêng */
+    opacity: 1;
+    /* Độ mờ của placeholder */
+}
+
+.btn1 {
+    background-color: #4CAF50;
+    color: white;
+    margin: 8px 0;
+
+    border: none;
+    cursor: pointer;
+
+}
+
+.btn1:hover {
+    background-color: #1c7a21;
+}
+
+.carousel-item img {
+    width: 100%;
+    max-height: 600px; /* Tăng chiều cao tối đa của ảnh */
+    object-fit: cover;
+    image-rendering: -webkit-optimize-contrast; /* Tăng cường độ nét cho ảnh */
+    image-rendering: crisp-edges; /* Tăng cường độ nét cho ảnh */
+    image-rendering: high-quality; /* Tăng cường độ nét cho ảnh */
+}
+
+
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 250px; /* Giới hạn chiều rộng tối đa */
+    background-color: rgb(246, 241, 241);
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+.product-image {
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.product-card .title {
+    font-family: 'Palatino', serif;
+    font-size: 1.2em;
+    color: rgb(17, 16, 16);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.product-card .btn {
+    align-self: center;
+}
+
+@media (max-width: 576px) {
+    .product-card {
+        width: 100%;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .product-card {
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) {
+    .product-card {
+        width: 85%;
+    }
+}
+
+.container-product {
+    position: relative;
+    display: grid; /* Sử dụng grid để phù hợp với grid layout của Tailwind CSS */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Tự động điều chỉnh số cột */
+    gap: 16px; /* Khoảng cách giữa các thẻ */
+    justify-items: center; /* Căn giữa các sản phẩm */
+    padding: 20px;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+.body-sub {
+  text-align:center;
+  background:linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
+  color:#555;
+  font-family:'Roboto';
+  font-weight:300;
+  font-size:32px;
+  padding-top:10vh;
+  height:20vh;
+  overflow:hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+}
+
+.div-sub {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+.div-sub:first-of-type {    /* For increasing performance 
+                       ID/Class should've been used. 
+                       For a small demo 
+                       it's okaish for now */
+  animation: showup 7s infinite;
+}
+
+.div-sub:last-of-type {
+  width:0px;
+  animation: reveal 7s infinite;
+}
+
+.div-sub:last-of-type span {
+  margin-left:-355px;
+  animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+.p-sub {
+  font-size:12px;
+  color:#999;
+  margin-top:200px;
+}

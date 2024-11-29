@@ -1,0 +1,139 @@
+.container1 {
+    position: relative;
+
+    text-align: center;
+    border: 0.5px solid whitesmoke;
+    width: 50%;
+    height: 600px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    background-color: black;
+
+}
+
+body {
+    background-color: #262626;
+    height: 100vh;
+    /* Chiều cao toàn bộ viewport */
+    display: flex;
+    /* Kích hoạt chế độ Flexbox */
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+}
+
+@keyframes background1 {
+    from {
+        background-position: 0 0%;
+    }
+
+    to {
+        background-position: 0 -200px;
+    }
+}
+
+.p1 {
+    color: #F2F5FE;
+    text-align: center;
+    font-size: 40px;
+    line-height: 1;
+    font-family: 'Rajdhani', sans-serif;
+    background: -webkit-linear-gradient(transparent, transparent), url(http://html5book.ru/wp-content/uploads/2016/08/bubbles.png) repeat;
+    background-size: 220px auto;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: background1 8s infinite linear;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+    width: 100%;
+}
+
+.form-group label {
+    width: 120px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    max-width: 300px;
+    width: 100%;
+    width: calc(100% - 110px);
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+.round .btn-DN {
+    position: relative;
+   border-radius: 10px;
+    border: 1px solid grey;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    /* Để căn giữa text theo chiều dọc */
+
+    text-align: center;
+    /* Căn giữa text theo chiều ngang */
+    background-color: black;
+    /* Đặt màu nền mặc định */
+    z-index: 1;
+    /* Đảm bảo text hiển thị trên pseudo-element */
+    overflow: hidden;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.round .btn-DN::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background-color: rgb(119, 188, 119);
+    /* Màu nền khi hover */
+
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    /* Bắt đầu từ tâm với kích thước 0 */
+
+    transition: transform 0.4s ease-in-out;
+    /* Hiệu ứng phóng to ra */
+
+    z-index: -1;
+    /* Đảm bảo pseudo-element nằm dưới text */
+
+}
+
+.round .btn-DN:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+
+}
+
+.btn-DN:hover {
+    color: aqua;
+}
+
+.img1 {
+    width: 200px;
+    height: 180px;
+}
+.round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+@media (max-width:576px) {
+    .container1 {
+        width: 90%;
+    }
+    
+}

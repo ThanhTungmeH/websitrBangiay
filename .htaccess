@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Allow access to files in /public/img, /public/css, and /public/js directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 
+
+# Optionally, you can add a rule to prevent direct access to .htaccess itself
+<Files .htaccess>
+    Order Allow,Deny
+    Deny from all
+</Files>
